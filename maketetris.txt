@@ -1,0 +1,19 @@
+all: prog
+
+prog: main.o affichage.o gestion_jeu.o interaction_utilisateur.o score.o
+  gcc -o prog main.o affichage.o gestion_jeu.o interaction_utilisateur.o score.o
+
+main.o: main.c
+  gcc -c main.c -o main.o 
+
+affichage.o: affichage.c
+  gcc -c affichage.c -o affichage.o 
+
+gestion_jeu.o: gestion_jeu.c
+  gcc -c gestion_jeu.c -o gestion_jeu.o
+
+interaction_utilisateur.o: interaction_utilisateur.c
+  gcc -c interaction_utilisateur.c -o interaction_utilisateur.o
+
+score.o: score.c
+  gcc -c score.c -o score.o
